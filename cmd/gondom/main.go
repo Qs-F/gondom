@@ -1,6 +1,6 @@
 package main
 
-import "github.com/SteinWord/gondom"
+import "github.com/Qs-F/gondom"
 
 func main() {
 	println(gondom.Make(21, 123))
