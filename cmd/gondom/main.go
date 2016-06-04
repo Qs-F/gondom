@@ -11,12 +11,8 @@ import (
 )
 
 func main() {
-	t, err := strconv.Atoi(time.Now().Format("20060102150405"))
+	t := time.Now().Unix()
 	b := bufio.NewWriter(os.Stdout)
-	if err != nil {
-		log.Print("something wrong")
-		os.Exit(1)
-	}
 	if len(os.Args) >= 2 {
 		n, err := strconv.Atoi(os.Args[1])
 		if err != nil {
