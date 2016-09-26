@@ -10,6 +10,9 @@ const (
 )
 
 func Make(n int, seed int64) string {
+	if n < 0 {
+		n = n * -1
+	}
 	b := make([]byte, n)
 	rand.Seed(seed)
 	for i := range b {
@@ -19,6 +22,9 @@ func Make(n int, seed int64) string {
 }
 
 func MakeURL(n int, seed int64) string {
+	if n < 0 {
+		n = n * -1
+	}
 	b := make([]byte, n)
 	rand.Seed(seed)
 	for i := range b {
